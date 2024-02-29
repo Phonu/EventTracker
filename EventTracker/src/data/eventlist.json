@@ -1,0 +1,93 @@
+[
+    {
+        "id": "1",
+        "eventName": "Metallica Concert",
+        "location": "Palace Grounds",
+        "subscription": "paid",
+        "entryFee": "200",
+        "thumbnailUrl": "",
+        "image": ""
+    },
+    {
+        "id": "2",
+        "eventName": "Saree Exhibition",
+        "location": "Malleswaram Grounds",
+        "subscription": "free",
+        "entryFee": "0",
+        "thumbnailUrl": "",
+        "image": ""
+    },
+    {
+        "id": "3",
+        "eventName": "Wine tasting event",
+        "location": "Links Brewery",
+        "entryFee": "200",
+        "subscription": "paid",
+        "thumbnailUrl": "",
+        "image": ""
+    },
+    {
+        "id": "4",
+        "eventName": "Startups Meet",
+        "location": "Kanteerava Indoor Stadium",
+        "subscription": "paid",
+        "entryFee": "200",
+        "thumbnailUrl": "",
+        "image": ""
+    },
+    {
+    
+        "id": "5",
+        "eventName": "Summer Noon Party",
+        "location": "Kumara Park",
+        "subscription": "paid",
+        "entryFee": "700",
+        "thumbnailUrl": "",
+        "image": ""
+    },
+    {
+        "id": "6",
+        "eventName": "Rock and Roll nights",
+        "location": "Sarjapur Road",
+        "subscription": "paid",
+        "entryFee": "400",
+        "thumbnailUrl": "",
+        "image": ""
+    },
+    {
+        "id": "7",
+        "eventName": "Barbecue Fridays",
+        "location": "Whitefield",
+        "subscription": "paid",
+        "entryFee": "200",
+        "thumbnailUrl": "",
+        "image": ""
+    },
+    {
+        "id": "8",
+        "eventName": "Summer workshop",
+        "location": "Indiranagar",
+        "subscription": "free",
+        "entryFee": "0",
+        "thumbnailUrl": "",
+        "image": ""
+    },
+    {
+        "id": "9",
+        "eventName": "Impressions & Expressions",
+        "location": "MG Road",
+        "subscription": "free",
+        "entryFee": "0",
+        "thumbnailUrl": "",
+        "image": ""
+    },
+    {
+        "id": "10",
+        "eventName": "Italian carnival",
+        "location": "Electronic City",
+        "entryFee": "0",
+        "subscription": "free",
+        "thumbnailUrl": "",
+        "image": ""
+    }
+]
