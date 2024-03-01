@@ -4,15 +4,14 @@ import { EventList } from '../interfaces/EventList';
 
 export const EventListData: EventList[] = require("./../data/eventlist.json");
 
-const GridView = ({navigation}): JSX.Element => {
+const OutsideEvents = ({navigation}): JSX.Element => {
 
     const renderItem = ({ item }: { item: EventList }) => {
         return (
             <TouchableOpacity style={{ backgroundColor: 'white'}} onPress={() =>handleOnEventClick(item)}>
                 <View style={styles.mainCardView}>
                     <View style={{alignItems: 'center'}}>
-                    <Text style={styles.title} >{item.eventName}</Text>
-
+                        <Text style={styles.title} >{item.eventName}</Text>
                     </View>
                     <Text style={styles.subTitle}>{`location: ${item.location}`}</Text>
                     <Text style={styles.subTitle}>{`Service:   ${item.subscription}`}</Text>
@@ -44,29 +43,22 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#DAE0E2',
+        // backgroundColor: '#4BCFFA',
     },
     mainCardView: {
         height: 120,
         width: 180,
-        // alignItems: 'center',
-        // justifyContent: 'center',
         borderRadius: 10,
         shadowOffset: { width: 0, height: 0 },
         shadowOpacity: 1,
         shadowRadius: 8,
         elevation: 8,
-        // flexDirection: 'row',
         paddingLeft: 16,
         paddingRight: 14,
         margin: 8,
-        borderColor: '#4834DF',
-        backgroundColor: '#EAF0F1',
-
-
-
+        borderColor: '#3498DB',
+        backgroundColor: '#4BCFFA',
     },
-
     title: {
         fontSize: 16,
         color: '#535C68',
@@ -76,7 +68,6 @@ const styles = StyleSheet.create({
       },
       subTitle: {
         fontSize: 14,
-        // color: '#25CCF7',
       }
 });
-export default GridView;
+export default OutsideEvents;

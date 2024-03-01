@@ -1,12 +1,3 @@
-/** 
- * event image, 
- * event name, 
- * location,
- *  entry type (paid or free) 
- *  a button
-that allows the event to be tracked by the user
- */
-
 import React from 'react';
 import { View, Text, StyleSheet, TextInput, Button, SafeAreaView } from 'react-native';
 import { EventList } from '../interfaces/EventList';
@@ -16,31 +7,23 @@ import { useDispatch, useSelector } from 'react-redux';
 import {addTrackerEvent} from '../store/selectedTrackerSlice'
 
 const EventDetails = ({route}): JSX.Element => {
-    const [number, onChangeNumber] = React.useState('');
-    const eventdata: EventList = route.params.item;
-    console.log('checking params data',eventdata  );
-
-    const selectedEvents = useSelector((state) => {console.log('stateeeee', console.log('hii', state.ids) )});
-
-    // console.log('hello', selectedEvents);
-
+    const eventInfo: EventList = route.params.item;
     const dispatch = useDispatch();
-    // console.log('list of eventList', selectedEvents)
 
     const handleAddEvents = () => {
-        console.log('add events')
-        console.log('heyyy', eventdata);
-        dispatch(addTrackerEvent({eventdata}));
+        console.log('selectedEvents::::', eventInfo);
+        dispatch(addTrackerEvent({eventInfo}));
     }
 
     return (
         <SafeAreaView style={styles.container}>
-            <Text>{eventdata.eventName}</Text>
-            <Text>{eventdata.location}</Text>
-            <Text>{eventdata.entryFee}</Text>
+            <View style={{height: 200, width: '95%', borderWidth: 1, margin: 8}}>
+                <Text></Text>
+            </View>
+            <Text>{eventInfo.eventName}</Text>
+            <Text>{eventInfo.location}</Text>
+            <Text>{eventInfo.entryFee}</Text>
             <Button title='Track this Event'  onPress={handleAddEvents}/>
-            <Button title='get events'  onPress={() => {console.log('12345', selectedEvents)}}/>
-
         </SafeAreaView>
     )
 };
@@ -48,8 +31,8 @@ const EventDetails = ({route}): JSX.Element => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
+        // justifyContent: 'center',
+        // alignItems: 'center'
     },
     input: {
         height: 40,

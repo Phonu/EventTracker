@@ -1,5 +1,6 @@
 
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import storage from '@react-native-async-storage/async-storage';
+// import storage from 'redux-persist/lib/storage' 
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 
 import { configureStore } from '@reduxjs/toolkit';
@@ -7,9 +8,7 @@ import eventTrackerReducer from './selectedTrackerSlice';
 
 const persistConfig = {
     key: 'root',
-    storage: AsyncStorage,
-    whitelist: ['favorites'],
-
+    storage,
 };
 
 // Middleware: Redux Persist Persisted Reducer
@@ -27,7 +26,6 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
-
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch

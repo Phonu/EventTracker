@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, TextInput, Button, SafeAreaView, Alert } from 'react-native';
 
 const Dashboard = ({navigation}): JSX.Element => {
-
     const [value, onChangeValue] = React.useState('');
 
     const handleOnPress = () => {
@@ -16,7 +15,6 @@ const Dashboard = ({navigation}): JSX.Element => {
     useEffect(() => {
         onChangeValue('')
     }, []);
-
 
     return (
         <SafeAreaView style={styles.container}>
@@ -39,7 +37,8 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#DAE0E2'
+        // backgroundColor: '#DAE0E2'
+
     },
     input: {
         height: 40,

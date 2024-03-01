@@ -1,19 +1,17 @@
 
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-
-import TrackerDrawer from '../screens/TrackerDrawer'
+import SelectedEvents from '../screens/SelectedEvents'
 import Dashboard from '../screens/Dashboard';
-
+import { MyTabs } from './TopTabNavigator';
 
 const Drawer = createDrawerNavigator();
-
 
 export function MyDrawers() {
     return (
         <Drawer.Navigator>
-            <Drawer.Screen  name= {'Dashboard'} component={Dashboard}/>
-            <Drawer.Screen  name= {'Event Tracker'} component={TrackerDrawer}/>
+            <Drawer.Screen  name= {'All Events'} component={MyTabs}/>
+            <Drawer.Screen  name= {'My Event'} component={SelectedEvents}/>
         </Drawer.Navigator>
     )
 }
