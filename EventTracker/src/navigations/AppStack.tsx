@@ -4,12 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Dashboard from "../screens/Dashboard";
 import EventDetails from "../screens/EventDetails";
-
-
 import { MyTabs } from "./TopTabNavigator";
 import { MyDrawers } from "./DrawerNavigator";
-import { Button } from "react-native";
-// import SelectedEvents from "../screens/SelectedEvents";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +16,6 @@ const AppStack = (): JSX.Element => {
                 <Stack.Screen name="Dashboard" component={Dashboard} options={{headerShown: false}}/>
                 <Stack.Screen name="EventList" component={MyDrawers} options={{headerShown: false}}/>
                 <Stack.Screen name="EventDetails" component={EventDetails}/>
-                {/* <Stack.Screen name="SelectedEvents" component={SelectedEvents}/> */}
             </Stack.Navigator>
         </NavigationContainer>
     )

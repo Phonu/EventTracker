@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, TextInput, Button, SafeAreaView, Alert } from 'react-native';
 
 const Dashboard = ({navigation}): JSX.Element => {
@@ -11,10 +11,6 @@ const Dashboard = ({navigation}): JSX.Element => {
             Alert.alert('Alert', 'Please enter your name')
         }
     }
-
-    useEffect(() => {
-        onChangeValue('')
-    }, []);
 
     return (
         <SafeAreaView style={styles.container}>
@@ -37,8 +33,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        // backgroundColor: '#DAE0E2'
-
     },
     input: {
         height: 40,

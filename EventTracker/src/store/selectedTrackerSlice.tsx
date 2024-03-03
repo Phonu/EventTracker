@@ -14,11 +14,8 @@ const selectedTrackerSlice = createSlice({
     initialState,
     reducers: {
         addIds: (state, action: PayloadAction<EventList []>) => {
-            console.log('111', action.payload.eventInfo.id);
             if (!state.eventIds.some(e => e.id === action.payload.eventInfo.id)) {
                 state.eventIds.push(action.payload.eventInfo);
-                console.log('222', state.eventIds);
-
             }
         },
         removeIds: (state, action) => {

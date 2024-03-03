@@ -22,7 +22,6 @@ const OutsideEvents = ({navigation}): JSX.Element => {
     }
 
     const handleOnEventClick = (item: EventList) => {
-        console.log('event data ....', item);
         navigation.navigate('EventDetails', {item: item});
     }
 
@@ -43,7 +42,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        // backgroundColor: '#4BCFFA',
     },
     mainCardView: {
         height: 120,

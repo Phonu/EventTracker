@@ -5,7 +5,6 @@ import { EventList } from '../interfaces/EventList';
 export const EventListData: EventList[] = require("./../data/eventlist.json");
 
 const LocalEvents = ({navigation}): JSX.Element => {
-    // console.log('checking data', EventListData);
     const renderItem = ({ item }: { item: EventList }) => {
         return (
             <TouchableOpacity style={{ backgroundColor: '#EAF0F1'}} onPress={() => handleOnEventClick(item)}>
@@ -22,7 +21,6 @@ const LocalEvents = ({navigation}): JSX.Element => {
     }
 
     const handleOnEventClick = (item: EventList ) => {
-        // console.log('event data ....', item);
         navigation.navigate('EventDetails', {item: item});
     }
     return (
@@ -39,7 +37,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#DAE0E2',
-        // backgroundColor: 'red'
 
     },
     mainCardView: {
