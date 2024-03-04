@@ -11,7 +11,7 @@ const persistConfig = {
 };
 
 // Middleware: Redux Persist Persisted Reducer
-const persistedReducer = persistReducer(persistConfig, eventTrackerReducer)
+const persistedReducer = persistReducer(persistConfig, eventTrackerReducer);
 
 export const store = configureStore({
     reducer: persistedReducer,
@@ -26,5 +26,5 @@ export const store = configureStore({
 
 export const persistor = persistStore(store);
 
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

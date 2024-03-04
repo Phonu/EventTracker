@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Button, SafeAreaView , TouchableOpacity, Alert} from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView , TouchableOpacity, Alert} from 'react-native';
 import { EventList } from '../interfaces/EventList';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import {addTrackerEvent} from '../store/selectedTrackerSlice'
 
@@ -12,7 +12,7 @@ const EventDetails = ({route}): JSX.Element => {
 
     const handleAddEvents = () => {
         dispatch(addTrackerEvent({eventInfo}));
-        Alert.alert('Event Successfully Added','Please check the list of tracked events in My Event')
+        Alert.alert('Success','Please check the list of tracked events in My Event');
     }
 
     return (

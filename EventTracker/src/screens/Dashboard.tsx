@@ -1,16 +1,16 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Button, SafeAreaView, Alert } from 'react-native';
+import { Text, StyleSheet, TextInput, Button, SafeAreaView, Alert } from 'react-native';
 
 const Dashboard = ({navigation}): JSX.Element => {
     const [value, onChangeValue] = React.useState('');
 
     const handleOnPress = () => {
         if (value.length) {
-            navigation.navigate('EventList')
+            navigation.navigate('EventList');
         } else {
-            Alert.alert('Alert', 'Please enter your name')
+            Alert.alert('Alert', 'Please enter your name');
         }
-    }
+    };
 
     return (
         <SafeAreaView style={styles.container}>

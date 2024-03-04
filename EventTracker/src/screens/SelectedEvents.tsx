@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, FlatList, Button, TouchableOpacity, Alert } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { EventList } from '../interfaces/EventList';
 import { removeTrackerEvent } from '../store/selectedTrackerSlice';
@@ -19,7 +19,7 @@ const SelectedEvents = ({ navigation }): JSX.Element => {
 
     const dispatch = useDispatch();
 
-    const removeEvent = (event) => {
+    const removeEvent = (event: EventList) => {
         dispatch(removeTrackerEvent({ event }));
         Alert.alert('Event Removed')
     }
